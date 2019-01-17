@@ -11,7 +11,8 @@ LABEL maintainer="jacexh <jace.xh@gmail.com>"
 
 RUN apk add git \
     && wget https://github.com/gohugoio/hugo/releases/download/v0.53/hugo_0.53_Linux-64bit.tar.gz \
-    && tar -C /usr/loca/bin -xzvf hugo_0.53_Linux-64bit.tar.gz
+    && tar -xzvf hugo_0.53_Linux-64bit.tar.gz \
+    && mv hugo /usr/bin/
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
