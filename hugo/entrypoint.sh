@@ -8,7 +8,7 @@ git config --global user.name "$GITHUB_ACTOR"
 echo "begin to clone hugo source code"
 git clone --recursive https://$GITHUB_ACTOR:$TOKEN@github.com/$GITHUB_REPOSITORY.git blog
 cd blog
-rm -rf publick
+rm -rf public
 
 echo "begin to clone github page repository"
 git clone --recursive https://$GITHUB_ACTOR:$TOKEN@github.com/$GITHUB_ACTOR/$GITHUB_ACTOR.github.io.git public
