@@ -1,0 +1,12 @@
+name: Hugo Action
+description: build and publish hugo project
+inputs:
+  token:
+    required: true
+    default: ${{ secrets.GITHUB_TOKEN }}
+  email:
+    required: true
+    default: "author"
+runs:
+  using: docker
+  image: Dockerfile
