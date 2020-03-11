@@ -3,7 +3,7 @@ description: build and publish hugo project
 inputs:
   token:
     required: true
-    default: "${{ secrets.GITHUB_TOKEN }}"
+    default: "github_token"
   email:
     required: true
     default: "author"
