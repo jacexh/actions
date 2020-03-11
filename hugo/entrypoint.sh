@@ -5,6 +5,9 @@ set -e
 git config --global user.email "$EMAIL"
 git config --global user.name "$GITHUB_ACTOR"
 
+echo "$EMAIL"
+echo "$TOKEN"
+
 echo "begin to clone hugo source code"
 git clone --recursive https://$GITHUB_ACTOR:$TOKEN@github.com/$GITHUB_REPOSITORY.git blog
 cd blog
